@@ -25,7 +25,12 @@ flowchart LR
 
 ## 安裝
 
-skill 就是這個倉庫裡的 `readme-showcase/` 資料夾，複製到你的 agent 讀取 skill 的位置即可。
+skill 就是這個倉庫裡的 `readme-showcase/` 資料夾。先 clone 倉庫，再把該資料夾複製到你的 agent 讀取 skill 的位置。
+
+```bash
+git clone https://github.com/xu-0306/readme-showcase.git
+cd readme-showcase
+```
 
 **Claude Code**
 

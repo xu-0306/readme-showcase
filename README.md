@@ -25,7 +25,12 @@ flowchart LR
 
 ## Install
 
-The skill is the `readme-showcase/` folder in this repo. Copy it to where your agent looks for skills.
+The skill is the `readme-showcase/` folder in this repo. Clone the repo, then copy that folder to where your agent looks for skills.
+
+```bash
+git clone https://github.com/xu-0306/readme-showcase.git
+cd readme-showcase
+```
 
 **Claude Code**
 
