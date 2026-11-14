@@ -39,7 +39,7 @@ Decide from the project's characteristics, in this order. The technology stack i
 4. **Is nothing visible** (library, protocol, backend)? Code as demo, with a diagram of where it sits.
 5. **Several surfaces or platforms, each installed separately?** Show the whole thing working once in the hero, then give each surface its own short install step or a matrix. Do not make the first screen a table.
 6. **Several distinct features that look different?** Add per-feature media below the quick start.
-7. **Does someone else already vouch for it** - a known author, a live site, real adopters? Say so in one line near the top. Without that, a pointer-style README leaves a stranger with nothing.
+7. **Does someone else already vouch for it** - a known author, a live site, real adopters? Say so in one line near the top. Without that, a pointer-style README leaves a first-time visitor with nothing.
 8. **Audience.** End users: lead with the outcome in everyday words and a download. Developers: lead with the install command and a snippet.
 9. **Install effort.** One command goes straight under the hero. Several paths go in a table or `<details>` folds, with the easiest shown open.
 10. **Many options?** Keep them in `docs/` or below a fold; a newcomer needs the first run, not the manual.
@@ -118,12 +118,13 @@ Width: set `width` on `<img>` rather than relying on file dimensions, so a 2x ca
 
 ## Writing the words
 
-- **Tagline**: what the user gets. "Live translated subtitles for any browser tab, running on your own PC" rather than "A FastAPI and Manifest V3 speech pipeline".
+- **Tagline**: what the user gets. "Live translated subtitles for any browser tab, running on your own PC" rather than "A FastAPI and Manifest V3 speech pipeline". Offer the user two or three candidates that differ in angle, not just in wording, and apply the one they pick.
+- **Plain words**: write for someone who has never seen the project or this skill. Planning terms (hero, surface, first screen, archetype) and writer's shorthand ("a stranger", "at a glance", "in the wild") stay out of the page. Read each sentence aloud: if you would not say it to a colleague, rewrite it.
 - **Features as outcomes**: a bold lead-in naming the result, then one sentence. Mechanisms, formats and protocol names go under "How it works".
 - **Lead with the differentiator**: the one thing that makes this project the right choice (local-only, no account, free, fastest, works offline) belongs in the first three lines, not in section nine.
-- **Quick start**: numbered, each step one action, the command in a copyable block, and what the user should see at the end. State prerequisites before step one.
+- **Quick start**: numbered, each step one action, the command in a copyable block, and what the user should see at the end. State prerequisites before step one. Step one is how the reader gets the project, which depends on how it is distributed: an installer from Releases, `pip install` / `npm install`, a store page, or `git clone` for things used from source (skills, templates, dotfiles, scripts).
 - **Limits**: platform, hardware, manual steps, unsigned binaries, preview status - near the top, plainly.
-- **Translations**: keep section order and media identical across languages; only the text differs.
+- **Translations**: keep section order and media identical across languages; only the text differs. Write each version in that language's own phrasing, starting from the meaning rather than from the other language's sentence, and have a tagline candidate set for each language.
 
 ## What carries a README with no media
 
@@ -142,6 +143,8 @@ A new or small project has none of these yet, which is why it needs the picture 
 - Mock-ups or generated art shown as the product.
 - A feature list of technologies.
 - Install instructions below pages of configuration.
+- A quick start that begins after the reader is assumed to have the files.
+- A tagline or translation that reads like the writer's notes rather than the user's words.
 - Numbers with no measurement behind them.
 - A wall of badges, or badges for things the project does not have.
 - Media hosted somewhere that can vanish (image hosts, a personal site) when the repo could hold it.

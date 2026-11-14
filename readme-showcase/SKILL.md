@@ -54,10 +54,10 @@ Follow `references/media-recipes.md` for the chosen surfaces. Rules that apply t
 
 Order, top to bottom. `references/readme-patterns.md` has the details and the HTML that GitHub accepts.
 
-1. Title block: name, one-line tagline in the user's words, badges that are true and useful (licence, latest release, platform, build), language switcher if translations exist.
+1. Title block: name, one-line tagline in the words the project's users would use (offer two or three candidates and let the user pick; it is the most-read line and a matter of taste), badges that are true and useful (licence, latest release, platform, build), language switcher if translations exist.
 2. Hero media.
 3. Two or three sentences: what it is, why it is different.
-4. Quick start in as few steps as the project honestly allows. If there is an easy path and a source path, show the easy one and fold the other.
+4. Quick start in as few steps as the project honestly allows. If there is an easy path and a source path, show the easy one and fold the other. Start from where the reader actually is: on the repository page with nothing installed. The first step is however this kind of project is obtained (a release download, a package install, a store link, a clone), so do not open with a command that assumes the files are already on their machine.
 5. Features, written as outcomes ("Subtitles appear over any tab") rather than mechanisms ("Streams Opus over WebSocket"), with media where a feature is visual.
 6. How it works: one diagram.
 7. Known limits and project status, stated plainly.
@@ -66,7 +66,9 @@ Order, top to bottom. `references/readme-patterns.md` has the details and the HT
 
 Keep what already works in the existing README; move it rather than rewrite it. Keep every factual claim the project can back and drop adjectives it cannot. Do not invent numbers: a latency, accuracy or speed-up figure needs a measurement the user can point to, otherwise leave it out.
 
-If the project has localized READMEs, apply the same structure and the same media to each, and keep them in step.
+If the project has localized READMEs, apply the same structure and the same media to each, and keep them in step. Write each language the way its readers would say it rather than translating sentence by sentence; a phrase that is natural in one language is often odd in another.
+
+The words a visitor reads follow the rules in "Writing the words" in `references/readme-patterns.md`. In particular, this skill's working vocabulary (hero, surface, first screen, archetype, shot list) is for planning, not for the page.
 
 ### 6. Verify
 
@@ -78,7 +80,12 @@ python <skill-dir>/scripts/check_readme_assets.py README.md
 
 It reports missing local files, broken relative links, images without alt text, oversized media and whether any image appears in the first screen. Fix what it finds, then look at the result with your own eyes: render the README (GitHub preview, or a local Markdown preview) in both light and dark themes and at a narrow width. A check that passes on file names says nothing about whether the hero is legible.
 
-Finish by telling the user what was produced, which claims or captures are still waiting on them, and how to regenerate each asset.
+The script cannot read, so do two more passes yourself:
+
+- **Read it as a visitor.** Go through the first screen and the quick start as someone who has only the repository URL and has never seen the project. Every step must be possible from that starting point, and every term must be one they already know.
+- **Look at the rendered page.** Diagrams, line breaks inside diagram labels, tables, image widths and folds can all differ from what the source suggests. If the README is already pushed, open the repository page in a browser; if not, use a local preview and check again after the push.
+
+Finish by telling the user what was produced, which claims or captures are still waiting on them, and how to regenerate each asset. Name any check you could not do (for example, the page was never viewed on GitHub) instead of letting a passed script stand in for it.
 
 ## Boundaries
 
