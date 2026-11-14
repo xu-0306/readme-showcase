@@ -2,7 +2,7 @@
 
 # readme-showcase
 
-**Turn a repo's README into a product page a stranger understands in seconds.**
+**Turn a repo's README into a product page that gets across in seconds.**
 
 An agent skill for Claude Code, Codex and other `SKILL.md` agents.
 

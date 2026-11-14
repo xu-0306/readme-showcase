@@ -2,7 +2,7 @@
 
 # readme-showcase
 
-**把專案 README 做成陌生人幾秒內就看懂的產品介紹頁。**
+**把專案 README 做成幾秒內就能傳達重點的產品介紹頁。**
 
 給 Claude Code、Codex 與其他支援 `SKILL.md` 的 agent 用的 skill。
 
