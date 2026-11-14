@@ -83,6 +83,8 @@ It reports missing local files, broken relative links, images without alt text, 
 The script cannot read, so do two more passes yourself:
 
 - **Read it as a visitor.** Go through the first screen and the quick start as someone who has only the repository URL and has never seen the project. Every step must be possible from that starting point, and every term must be one they already know.
+- **Check every step against the real interface.** Each button name, menu, option and file name in the quick start must exist in the current code or the running app. Search the source for each label; a plausible-sounding step that the UI does not offer is worse than no step.
+- **Tone pass.** Re-read the tagline, intro, feature list and captions against "Prose that reads as machine-written" in `references/readme-patterns.md`, in every language version. In particular: bold labels are plain noun phrases, the main promise appears at most twice, and second-person pronouns are not in every sentence.
 - **Look at the rendered page.** Diagrams, line breaks inside diagram labels, tables, image widths and folds can all differ from what the source suggests. If the README is already pushed, open the repository page in a browser; if not, use a local preview and check again after the push.
 
 Finish by telling the user what was produced, which claims or captures are still waiting on them, and how to regenerate each asset. Name any check you could not do (for example, the page was never viewed on GitHub) instead of letting a passed script stand in for it.

@@ -9,6 +9,7 @@ Drawn from a read of 24 popular repositories' READMEs in November 2026. The exam
 - [What the first screen holds](#what-the-first-screen-holds)
 - [HTML that GitHub renders](#html-that-github-renders)
 - [Writing the words](#writing-the-words)
+- [Prose that reads as machine-written](#prose-that-reads-as-machine-written)
 - [What carries a README with no media](#what-carries-a-readme-with-no-media)
 - [Common mistakes](#common-mistakes)
 
@@ -120,11 +121,35 @@ Width: set `width` on `<img>` rather than relying on file dimensions, so a 2x ca
 
 - **Tagline**: what the user gets. "Live translated subtitles for any browser tab, running on your own PC" rather than "A FastAPI and Manifest V3 speech pipeline". Offer the user two or three candidates that differ in angle, not just in wording, and apply the one they pick.
 - **Plain words**: write for someone who has never seen the project or this skill. Planning terms (hero, surface, first screen, archetype) and writer's shorthand ("a stranger", "at a glance", "in the wild") stay out of the page. Read each sentence aloud: if you would not say it to a colleague, rewrite it.
-- **Features as outcomes**: a bold lead-in naming the result, then one sentence. Mechanisms, formats and protocol names go under "How it works".
+- **Features as outcomes**: a short bold label that names the capability as a plain noun phrase ("Optional translation", "Offline mode"), a colon, then one factual sentence. The label is a name, not a slogan: no quips, imperatives or full sentences in bold. Mechanisms, formats and protocol names go under "How it works".
 - **Lead with the differentiator**: the one thing that makes this project the right choice (local-only, no account, free, fastest, works offline) belongs in the first three lines, not in section nine.
 - **Quick start**: numbered, each step one action, the command in a copyable block, and what the user should see at the end. State prerequisites before step one. Step one is how the reader gets the project, which depends on how it is distributed: an installer from Releases, `pip install` / `npm install`, a store page, or `git clone` for things used from source (skills, templates, dotfiles, scripts).
 - **Limits**: platform, hardware, manual steps, unsigned binaries, preview status - near the top, plainly.
 - **Translations**: keep section order and media identical across languages; only the text differs. Write each version in that language's own phrasing, starting from the meaning rather than from the other language's sentence, and have a tagline candidate set for each language.
+
+## Prose that reads as machine-written
+
+Readers recognise generated copy quickly, and once they do they trust the rest of the page less. These patterns are the usual giveaways. They are habits of tone, so look for the pattern, not for these exact words.
+
+| Pattern | Looks like | Write instead |
+|---|---|---|
+| Slogan labels | Bold lead-ins phrased as quips, imperatives or contrasts: "Translate, or don't.", "Your data, your rules.", "Set it and forget it." | A noun phrase that names the capability: "Optional translation", "Local storage". |
+| The same promise everywhere | The differentiator repeated in the tagline, the intro, a feature bullet and its own section. | State it once near the top and once where its details live. |
+| Padded lists | Three or four examples where one or two do the job; "whether you are X, Y or Z". | The one or two examples that matter. |
+| Coaching the reader | "if you like", "you can always change this later", "don't worry", "wherever you want". | Drop it, or state the fact ("Settings can be changed on the Settings page"). |
+| Personification and drama | "until a capture asks for it", "the app owns your settings", "nothing heavy", "magic". | Literal verbs: loads, stores, starts, sends. |
+| Mini-taglines | A selling sentence under every heading or image: "Manage everything from one window.", "Download a model that runs on your PC." | Headings and captions that label what is shown: "Local translation models". |
+| Defensive honesty | Captions such as "Recorded with the real product, no edits". | Give the facts that matter (source, licence); how it was made belongs in the docs. |
+| Second person in every sentence | "your PC", "your language", "a service you choose" in sentence after sentence. | Neutral subjects (the app, the local machine) with "you" only where it reads naturally. |
+
+In Chinese and other languages, the same habits show up differently:
+
+- **Translationese**: English sentence order carried over, e.g. 「聲音交給你電腦上的語音辨識處理」 for 「語音辨識在本機執行」, or 「會發生什麼」 as a table header for 「說明」.
+- **你 in every sentence**: Traditional Chinese technical documentation mostly uses 本機, 使用者, or no subject at all.
+- **Slogan constructions**: 「由你決定」「隨你調」「一鍵搞定」 as feature labels.
+- **Forced conversational tone**: 「就行」「就算……也……」 in reference text. A friendly tone is fine; spoken filler is not.
+
+Match the register of the project's existing docs and of well-regarded READMEs in that language community, not a marketing page.
 
 ## What carries a README with no media
 
